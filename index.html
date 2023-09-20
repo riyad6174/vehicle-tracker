@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+
+    <!-- <script defer src="other.js"></script> -->
+    <script defer src="script.js"></script>
+    <script src="ws.js"></script>
+    <title>Vehicle Tracker</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <img src="icon.png" alt="Logo" class="logo" />
+
+      <ul id="list" class="workouts">
+        <form class="form">
+          <div id="vehicle-filter">
+            <label>
+              <input id="all" type="radio" name="filter" value="all" checked />
+              All
+            </label>
+            <label>
+              <input id="moving" type="radio" name="filter" value="moving" />
+              Moving
+            </label>
+            <label>
+              <input id="idle" type="radio" name="filter" value="idle" /> Idle
+            </label>
+          </div>
+        </form>
+      </ul>
+
+      <p class="copyright">Presentation Purpose Only</p>
+    </div>
+
+    <div id="map" class="map-container"></div>
+    <div id="vehicle1-path" class="vehicle-path"></div>
+    <div id="vehicle2-path" class="vehicle-path"></div>
+  </body>
+</html>
