@@ -28,35 +28,33 @@
 
     <!-- <script defer src="other.js"></script> -->
     <script defer src="script.js"></script>
-    <script src="ws.js"></script>
     <title>Vehicle Tracker</title>
   </head>
   <body>
     <div class="sidebar">
       <img src="icon.png" alt="Logo" class="logo" />
-
-      <ul id="list" class="workouts">
-        <form class="form">
-          <div id="vehicle-filter">
-            <label>
-              <input id="all" type="radio" name="filter" value="all" checked />
-              All
-            </label>
-            <label>
-              <input id="moving" type="radio" name="filter" value="moving" />
-              Moving
-            </label>
-            <label>
-              <input id="idle" type="radio" name="filter" value="idle" /> Idle
-            </label>
-          </div>
-        </form>
+      <form class="form">
+        <div id="vehicle-filter">
+          <label>
+            <input id="all" type="radio" name="filter" value="all" checked />
+            All
+          </label>
+          <label>
+            <input id="moving" type="radio" name="filter" value="moving" />
+            Moving
+          </label>
+          <label>
+            <input id="idle" type="radio" name="filter" value="idle" /> Idle
+          </label>
+        </div>
+      </form>
+      <ul id="list" class="trackings">
+        <!-- vehicle list will be appended here -->
       </ul>
 
       <p class="copyright">Presentation Purpose Only</p>
     </div>
 
     <div id="map" class="map-container"></div>
-
   </body>
 </html>

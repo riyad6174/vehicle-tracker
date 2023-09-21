@@ -13,29 +13,12 @@ const wss = new WebSocket.Server({ server });
 // Mock vehicle data
 let vehicles = [];
 
-// Function to generate random latitude and longitude
-function getRandomCoordinates() {
-  const latitude = (Math.random() - 0.5) * 0.01;
-  const longitude = (Math.random() - 0.5) * 0.01;
-  return { latitude, longitude };
-}
-
-// Function to update vehicle status
-// function updateVehicleStatus(vehicle) {
-//   const newCoordinates = getRandomCoordinates();
-//   vehicle.latitude = newCoordinates.latitude;
-//   vehicle.longitude = newCoordinates.longitude;
-//   vehicle.status = 'moving';
-//   setTimeout(() => {
-//     vehicle.status = 'idle';
-//   }, 3000); // Set the status to idle after 3 seconds
-// }
-
 const vehicleList = [
-  { id: 1, lat: 51.54, lng: -0.09, status: 'moving' },
-  { id: 2, lat: 51.51, lng: -0.1, status: 'moving' },
-  { id: 3, lat: 51.52, lng: -0.2, status: 'moving' },
-  { id: 4, lat: 51.57, lng: -0.3, status: 'moving' }
+  { id: 1, lat: 51.55, lng: -0.09, status: 'moving' },
+  { id: 2, lat: 51.54, lng: -0.10, status: 'moving' },
+  { id: 3, lat: 51.54, lng: -0.08, status: 'moving' },
+  { id: 4, lat: 51.53, lng: -0.010, status: 'moving' },
+  { id: 5, lat: 51.53, lng: -0.10, status: 'moving' }
 ];
 
 for (const vehicle of vehicleList) {

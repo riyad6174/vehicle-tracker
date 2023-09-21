@@ -101,6 +101,61 @@ a:visited {
   color: var(--color-light--1);
 }
 
+.trackings {
+  list-style: none;
+  height: 77vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.trackings::-webkit-scrollbar {
+  width: 0;
+}
+
+.tracking {
+  background-color: var(--color-dark--2);
+  border-radius: 5px;
+  padding: 1.5rem 2.25rem;
+  margin-bottom: 1.75rem;
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+}
+.tracking--running {
+  border-left: 5px solid var(--color-brand--2);
+}
+
+.tracking__title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  grid-column: 1 / -1;
+}
+
+.tracking__details {
+  display: flex;
+  align-items: baseline;
+}
+
+.tracking__icon {
+  font-size: 1.8rem;
+  margin-right: 0.2rem;
+  height: 0.28rem;
+}
+
+.tracking__value {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.tracking__unit {
+  font-size: 1.1rem;
+  color: var(--color-light--1);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
 /* MAP */
 #map {
   flex: 1;
